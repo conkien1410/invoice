@@ -1,0 +1,75 @@
+{
+    "condition": {
+        "join": "and",
+        "rules": [
+            {
+                "field": "package.name",
+                "value": "BASIC",
+                "oper": "equal",
+                "type": "string"
+            },
+            {
+                
+                "join": "or",
+                "rules": [
+                    {
+                        "field": "order.number",
+                        "value": "0",
+                        "oper": "greaterthan",
+                        "type": "int"
+                    },
+                    {
+                        "field": "order.date",
+                        "value": "2023-01-12",
+                        "oper": "greaterthan",
+                        "type": "date"
+                    }
+                ]
+            }
+
+        ]
+    },
+    "assignment": {
+        "package.price": "package.price - 20"
+    }
+}
+
+
+
+{
+    "condition": {
+        "join": "and",
+        "rules": [
+            {
+                "field": "package.name",
+                "value": "STANDARD",
+                "oper": "equal",
+                "type": "string"
+            },
+            {
+                
+                "join": "or",
+                "rules": [
+                    {
+                        "field": "order.number",
+                        "value": "1",
+                        "oper": "greaterthan",
+                        "type": "int"
+                    },
+                    {
+                        "field": "order.date",
+                        "value": "2023-01-12",
+                        "oper": "greaterthan",
+                        "type": "date"
+                    }
+                ]
+            }
+
+        ]
+    },
+    "assignment": {
+        "order.number": {
+            
+        }
+    }
+}

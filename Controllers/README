@@ -1,0 +1,5 @@
+DB
+table + mock data => db
+
+API
+https://localhost:7184/api/Invoice/CustomerId/1
